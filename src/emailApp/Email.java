@@ -33,6 +33,7 @@ public class Email {
         System.out.println("DEPARTMENT CODE: \n1 for Sales\n2 for Development\n3 for Accounting\n0 for none\nEnter the department code:");
         Scanner in = new Scanner(System.in);
         int depChoice = in.nextInt();
+
         if (depChoice == 1) {
             return "sales";
         } else if (depChoice == 2) {
