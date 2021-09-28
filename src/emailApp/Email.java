@@ -91,6 +91,14 @@ public class Email {
         return this.password;
     }
 
+    public String getFirstName(){
+        return firstName;
+    }
+
+    public String getLastName(){
+        return lastName;
+    }
+
     public String showInfo() {
         return "DISPLAY NAME: " + this.firstName + " " + this.lastName + "\nCOMPANY EMAIL: " + this.email + "\nMAILBOX CAPACITY: " + this.mailboxCapacity + "mb\nID: " + id;
     }
