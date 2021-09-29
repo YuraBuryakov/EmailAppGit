@@ -26,23 +26,19 @@ public class EmailApp {
                 Email worker = new Email();
                 System.out.println(worker.showInfo());
                 Workers.add(worker);
-                System.out.println("see workers? (y/n)");
-                Scanner in = new Scanner(System.in);
-                char an = in.next().charAt(0);
-                if (an == 'y'){
-                    for(Email w: Workers){
-                        System.out.println(w.showInfo());
-                    }
-                }
+                PersonalAccount.account(worker);
+                //System.out.println("see workers? (y/n)");
+                //Scanner in = new Scanner(System.in);
+                //char an = in.next().charAt(0);
+                //if (an == 'y'){
+                   // for(Email w: Workers){
+                        //System.out.println(w.showInfo());
+                    //}
+                //}
 
             } else if (answer == 3){
                 answerForFinish = Finish();
             }
-
-
-
-
-
 
         } while(answerForFinish);
 
