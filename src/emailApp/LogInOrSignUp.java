@@ -6,20 +6,29 @@ import java.util.Scanner;
 
 public class LogInOrSignUp {
 
+    //Does not work
         public static boolean signUp(Collection<Email> worker){
             boolean answer = false;
-            System.out.println("Welcome to Email for workers!\nPlease enter your first name for logging in");
-            Scanner in = new Scanner(System.in);
-            String answerFN = in.next();
-            System.out.println("Enter your last name");
-            Scanner inLN = new Scanner(System.in);
-            String answerLN = in.next();
-            System.out.println("Just a minute: we are checking you in our system ");
-            for(Email w: worker){
-                if(answerFN == w.getFirstName() && answerLN == w.getLastName()) {
-                    answer = true;
+
+            System.out.println("Welcome to Email for workers!\nPlease enter your email");
+            while(!answer){
+                Scanner in = new Scanner(System.in);
+                String userAnswer = in.next();
+                System.out.println("Just a minute: we are checking you in our system ");
+                for(Email w: worker){
+
+                    if (userAnswer == w.getEmail().toString()){
+                        System.out.println(w.getEmail());
+                        answer = true;
+                    }
+                }
+                if(answer == false){
+                    System.out.println("Incorrect email. Please enter again");
+                    System.out.println("Your: " + userAnswer);
+                    ;
                 }
             }
+
             return answer;
         }
 

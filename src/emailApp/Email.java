@@ -99,6 +99,12 @@ public class Email {
         return lastName;
     }
 
+    public String getEmail(){return email;}
+
+    public int getDefaultpasswordLenght(){
+        return defaultpasswordLenght;
+    }
+
     public String showInfo() {
         return "DISPLAY NAME: " + this.firstName + " " + this.lastName + "\nCOMPANY EMAIL: " + this.email + "\nMAILBOX CAPACITY: " + this.mailboxCapacity + "mb\nID: " + id;
     }
