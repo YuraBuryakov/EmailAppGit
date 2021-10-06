@@ -1,5 +1,11 @@
 package emailApp;
 
+import java.beans.XMLDecoder;
+import java.beans.XMLEncoder;
+import java.io.File;
+import java.io.IOException;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -9,15 +15,16 @@ public class EmailApp {
 
     public static void main(String[] args) {
         boolean answerForFinish = true;
+
         do {
 
             System.out.println("Welcome to Mail application for workers of our company");
-            System.out.println("Please choose an action\n1-Log in our account\n2-Create your account\n3-Exit");
+            System.out.println("Please choose an action\n1-Log in our account (Does not work now)\n2-Create your account\n3-Exit");
             int answer = LogInOrSignUp.scannerForAnswer(3);
 
             if  (answer == 1) {
                 if(LogInOrSignUp.signUp(Workers)){
-                    System.out.println("You are welcome! This is your info");
+                    System.out.println("You are welcome! This is your info ");
 
                 } else{
                     System.out.println("You are not in our base");
@@ -25,16 +32,9 @@ public class EmailApp {
             } else if(answer == 2){
                 Email worker = new Email();
                 System.out.println(worker.showInfo());
+
                 Workers.add(worker);
                 PersonalAccount.account(worker);
-                //System.out.println("see workers? (y/n)");
-                //Scanner in = new Scanner(System.in);
-                //char an = in.next().charAt(0);
-                //if (an == 'y'){
-                   // for(Email w: Workers){
-                        //System.out.println(w.showInfo());
-                    //}
-                //}
 
             } else if (answer == 3){
                 answerForFinish = Finish();

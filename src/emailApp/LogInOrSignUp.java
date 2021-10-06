@@ -9,7 +9,6 @@ public class LogInOrSignUp {
     //Does not work
         public static boolean signUp(Collection<Email> worker){
             boolean answer = false;
-
             System.out.println("Welcome to Email for workers!\nPlease enter your email");
             while(!answer){
                 Scanner in = new Scanner(System.in);

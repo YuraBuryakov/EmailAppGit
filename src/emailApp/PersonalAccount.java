@@ -28,6 +28,7 @@ public class PersonalAccount {
         System.out.println("Enter your new password(which has to contain 10 characters");
         Scanner in = new Scanner(System.in);
         String password = in.next();
+
         if(password.length() == 10){
             System.out.println("Your password is successfully changed");
             worker.changePassword(password);
